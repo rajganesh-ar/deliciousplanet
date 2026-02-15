@@ -203,17 +203,17 @@ export default function ComingSoon() {
       <div className="relative z-10 flex flex-col min-h-[100dvh]">
         {/* ── Top bar: Logo ── */}
         <motion.header
-          initial={{ opacity: 0, y: -30, scale: 0.8 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="flex items-center justify-center px-4 sm:px-8 md:px-12 py-8 sm:py-12 md:py-16"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          className="flex items-center px-4 sm:px-8 md:px-12 pt-5 sm:pt-7 md:pt-8"
         >
           <Image
             src="/logo.svg"
             alt="Delicious Planet"
-            width={200}
-            height={200}
-            className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]"
+            width={80}
+            height={80}
+            className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)] brightness-0 invert"
             priority
           />
         </motion.header>
