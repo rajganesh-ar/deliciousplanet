@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import gsap from 'gsap'
 
-const TARGET_DATE = new Date('2026-02-20T00:00:00').getTime()
+const TARGET_DATE = new Date('2026-02-25T00:00:00').getTime()
 
 interface TimeLeft {
   days: number
@@ -130,7 +130,12 @@ function OliveLeaf({ leaf }: { leaf: (typeof oliveLeaves)[0] }) {
         opacity: 0,
       }}
     >
-      <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      <svg
+        viewBox="0 0 60 60"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full"
+      >
         {/* Olive leaf shape */}
         <path
           d="M30 4 C38 8, 50 18, 52 30 C54 42, 44 54, 30 56 C16 54, 6 42, 8 30 C10 18, 22 8, 30 4Z"
@@ -139,14 +144,49 @@ function OliveLeaf({ leaf }: { leaf: (typeof oliveLeaves)[0] }) {
           strokeWidth="1.5"
         />
         {/* Leaf vein - center */}
-        <path d="M30 8 Q30 30, 30 54" stroke="rgba(90, 130, 30, 0.9)" strokeWidth="1.5" fill="none" />
+        <path
+          d="M30 8 Q30 30, 30 54"
+          stroke="rgba(90, 130, 30, 0.9)"
+          strokeWidth="1.5"
+          fill="none"
+        />
         {/* Leaf veins - sides */}
-        <path d="M30 16 Q22 22, 14 26" stroke="rgba(90, 130, 30, 0.6)" strokeWidth="1" fill="none" />
-        <path d="M30 16 Q38 22, 46 26" stroke="rgba(90, 130, 30, 0.6)" strokeWidth="1" fill="none" />
-        <path d="M30 28 Q20 34, 12 38" stroke="rgba(90, 130, 30, 0.5)" strokeWidth="1" fill="none" />
-        <path d="M30 28 Q40 34, 48 38" stroke="rgba(90, 130, 30, 0.5)" strokeWidth="1" fill="none" />
-        <path d="M30 40 Q22 44, 16 48" stroke="rgba(90, 130, 30, 0.4)" strokeWidth="0.8" fill="none" />
-        <path d="M30 40 Q38 44, 44 48" stroke="rgba(90, 130, 30, 0.4)" strokeWidth="0.8" fill="none" />
+        <path
+          d="M30 16 Q22 22, 14 26"
+          stroke="rgba(90, 130, 30, 0.6)"
+          strokeWidth="1"
+          fill="none"
+        />
+        <path
+          d="M30 16 Q38 22, 46 26"
+          stroke="rgba(90, 130, 30, 0.6)"
+          strokeWidth="1"
+          fill="none"
+        />
+        <path
+          d="M30 28 Q20 34, 12 38"
+          stroke="rgba(90, 130, 30, 0.5)"
+          strokeWidth="1"
+          fill="none"
+        />
+        <path
+          d="M30 28 Q40 34, 48 38"
+          stroke="rgba(90, 130, 30, 0.5)"
+          strokeWidth="1"
+          fill="none"
+        />
+        <path
+          d="M30 40 Q22 44, 16 48"
+          stroke="rgba(90, 130, 30, 0.4)"
+          strokeWidth="0.8"
+          fill="none"
+        />
+        <path
+          d="M30 40 Q38 44, 44 48"
+          stroke="rgba(90, 130, 30, 0.4)"
+          strokeWidth="0.8"
+          fill="none"
+        />
       </svg>
     </div>
   )
@@ -194,9 +234,7 @@ export default function ComingSoon() {
 
       {/* Olive leaves floating animation layer */}
       <div className="absolute inset-0 z-[5] overflow-hidden pointer-events-none">
-        {mounted && oliveLeaves.map((leaf) => (
-          <OliveLeaf key={leaf.id} leaf={leaf} />
-        ))}
+        {mounted && oliveLeaves.map((leaf) => <OliveLeaf key={leaf.id} leaf={leaf} />)}
       </div>
 
       {/* Content — split into top bar, center spacer (product area), and bottom section */}
@@ -270,9 +308,7 @@ export default function ComingSoon() {
             </div>
 
             {/* Launch date badge */}
-            <div
-              className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/[0.06] backdrop-blur-lg border border-white/[0.1] self-start sm:self-auto"
-            >
+            <div className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/[0.06] backdrop-blur-lg border border-white/[0.1] self-start sm:self-auto">
               <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
               <span
                 className="text-[9px] sm:text-[10px] md:text-xs text-white/50 uppercase tracking-[0.15em] font-medium"
