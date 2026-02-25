@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import gsap from 'gsap'
 
-const TARGET_DATE = new Date('2026-02-25T00:00:00').getTime()
+const TARGET_DATE = new Date('2026-03-01T00:00:00').getTime()
 
 interface TimeLeft {
   days: number
